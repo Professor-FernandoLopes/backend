@@ -17,13 +17,11 @@ export default class CreateUsers1593302672724 implements MigrationInterface {
             name: 'name',
             type: 'varchar',
           },
+         
+          
           {
-            name: 'empresa',
-            type: 'varchar',
-          },
-          {
-            name: 'cnpj',
-            type: 'varchar',
+            name: 'quantidade',
+            type: 'float4',
           },
           {
             name: 'email',

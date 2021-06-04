@@ -9,8 +9,6 @@ import User from '../infra/typeorm/entities/User';
 
 interface IRequest {
   name: string;
-  empresa:string;
-  cnpj:string;
   quantidade:number;
   email: string;
   password: string;
@@ -29,7 +27,7 @@ class CreateUserService {
     private cacheProvider: ICacheProvider,
   ) {}
 
-  public async execute({ name, empresa, quantidade, email, password, cnpj }: IRequest): Promise<User> {
+  public async execute({ name, quantidade, email, password }: IRequest): Promise<User> {
     const checkUserExists = await this.usersRepository.findByEmail(email);
 
     if (checkUserExists) {
@@ -40,8 +38,7 @@ class CreateUserService {
 
     const user = await this.usersRepository.create({
       name,
-      empresa,
-      cnpj,
+      
       email,
       password: hashedPassword,
       quantidade

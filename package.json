@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
     "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --transpileOnly --ignore-watch node_modules src/shared/infra/http/server.ts",
-    "start": "ts-node src/shared/infra/http/server.ts",
+    "start": "ts-node src/shared/infra/http/server.js",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "test": "jest"
   },
@@ -17,6 +17,7 @@
     "bcryptjs": "^2.4.3",
     "celebrate": "^12.1.2",
     "class-transformer": "^0.3.1",
+    "config": "^3.3.6",
     "cors": "^2.8.5",
     "date-fns": "^2.14.0",
     "dotenv": "^8.2.0",
@@ -82,6 +83,7 @@
     "tsconfig-paths": "^3.9.0",
     "tscpaths": "^0.0.9",
     "typescript": "^3.9.5"
-  },
-  "type": "module"
+  }
+  
+  
 }

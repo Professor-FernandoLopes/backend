@@ -17,11 +17,6 @@ class User {
   @Column()
   name: string;
 
-  @Column()
-  empresa: string;
-
-  @Column()
-  cnpj: string;
 
   @Column()
   quantidade: number;
